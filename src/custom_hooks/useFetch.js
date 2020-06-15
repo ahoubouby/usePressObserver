@@ -12,6 +12,7 @@ export const useFetch = ({ url, initParams = {} }) => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
+        // todo add params encodeUrlComp
         const response = await fetch(`${dynamicUrl}${dynamicParams}`);
         const result = await response.json();
         if (response.ok) {
