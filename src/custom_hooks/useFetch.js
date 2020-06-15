@@ -27,6 +27,6 @@ export const useFetch = ({ url }) => {
       }
     };
     fetchData();
-  });
+  }, [dynamicUrl]);
   return [data, isLoading, hasError, errorMessage, setUrl];
 };
